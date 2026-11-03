@@ -1,0 +1,23 @@
+{
+  "work mode": [
+    {"action": "lights_on", "brightness": 100},
+    {"action": "open_work_tabs"},
+    {"action": "open_url", "value": "https://open.spotify.com"},
+    {"action": "open_app", "value": "discord"}
+  ],
+  "gaming mode": [
+    {"action": "lights_on", "brightness": 80, "color": "red"},
+    {"action": "open_app", "value": "steam"},
+    {"action": "open_app", "value": "discord"}
+  ],
+  "movie mode": [
+    {"action": "brightness", "brightness": 20},
+    {"action": "media", "value": "netflix"},
+    {"action": "volume", "value": 80}
+  ],
+  "sleep mode": [
+    {"action": "all_devices_off"},
+    {"action": "lights_off"},
+    {"action": "lock_pc"}
+  ]
+}

@@ -1,0 +1,75 @@
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Persistent memory holds personal facts about the user.
+memory.json
+# Cross-session conversation memory (rolling recap + archived session summaries).
+conversation_recap.json
+conversation_archive.jsonl
+# Voice fingerprint + lock-mode state for speaker verification.
+voice_profile.json
+voice_state.json
+# Personal to-do list.
+todo.json
+# Local app launcher mappings.
+apps.json
+# Persistent reminders.
+reminders.json
+# Unified agenda store.
+agenda.json
+# Google Calendar OAuth artifacts.
+credentials.json
+token.json
+
+# Local secrets (API keys etc.) -- never commit these.
+secrets_local.py
+
+# Piper voice models -- large, downloaded with `python download_voice.py`.
+voices/
+*.onnx
+*.onnx.json
+
+# Wake-word model + openWakeWord training artefacts (the trained "Hey Orion"
+# model is personal; train your own -- see the README).
+models/
+*.tflite
+
+# Temp audio files written during TTS playback.
+orion_tts_*.wav
+orion_warm_*.wav
+
+# Song recognition debug log + captured clips (local diagnostics only).
+song_debug.log
+song_last_capture*.wav
+
+# Replay debugger captures: rolling WAVs + JSONL index.
+debug_audio/
+
+# Telemetry log + rendered dashboard.
+stats.jsonl
+stats.html
+
+# OS / editor cruft.
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+tts_debug/
+
+# Hub overrides (user-edited config from the Universal Hub)
+config_overrides.json
+
+# Daily briefing / morning music once-per-day markers.
+briefing_state.json
+morning_music_state.json
+
+# Local Windows shortcuts (absolute paths).
+.launcher/
+*.lnk
+
+# Durable run log (logbuf). Records why Orion stopped, including native
+# crash dumps from faulthandler. Rotated at 2 MB into orion.log.1.
+orion.log
+orion.log.1

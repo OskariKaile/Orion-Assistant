@@ -1,0 +1,44 @@
+SpeechRecognition==3.10.4
+PyAudio==0.2.14
+pyautogui==0.9.54
+pyperclip==1.9.0
+pyttsx3==2.90
+pygetwindow==0.0.9
+keyboard==0.13.5
+pystray==0.19.5
+Pillow==10.4.0
+pytesseract==0.3.13
+pywinauto==0.6.8
+google-genai==2.3.0
+# DeepSeek and Grok both speak the OpenAI-compatible API (deepseek_bridge.py,
+# grok_bridge.py). DeepSeek is the default brain, so this is not optional.
+openai==1.109.1
+pywin32==306
+pycaw==20240210
+psutil==7.0.0
+comtypes==1.4.5
+plyer==2.1.0
+winshell==0.6
+fastembed==0.3.6
+openwakeword==0.6.0
+piper-tts==1.4.2
+# Local speech-to-text (transcribe.py). Without it Orion falls back to
+# Google's web speech API.
+useful-moonshine-onnx==20251121
+faster-whisper==1.1.0
+pywebview==6.2.1
+# Song recognition (song.py / recognize_song.py). numpy is pinned <2 because
+# fastembed needs it; shazamio's metadata asks for numpy>=2.2 but works fine
+# with 1.26, so the resolver prints a harmless conflict warning -- it still
+# installs. PyAudioWPatch does the WASAPI loopback + mic capture.
+numpy==1.26.4
+PyAudioWPatch==0.2.12.8
+shazamio==0.8.1
+imageio-ffmpeg==0.6.0
+# Google Calendar (unified agenda). One-time OAuth via setup_calendar.py.
+google-api-python-client==2.144.0
+google-auth-oauthlib==1.2.1
+# MCP (Model Context Protocol) client + the fetch server from config.MCP_SERVERS.
+# Orion speaks MCP to external tool servers via the official SDK (mcp_client.py).
+mcp==1.27.2
+mcp-server-fetch==2026.6.4
